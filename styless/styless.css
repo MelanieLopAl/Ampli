@@ -23,3 +23,7 @@ form input {
   border: 1px solid #ccc;
   padding: 10px;
 }
+
+img {
+  height: 300px;
+}
