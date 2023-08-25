@@ -1,5 +1,5 @@
-import PlantBuilder from '/js/plantBuilder.js';
-import Observer from '/js/observer.js';
+import PlantBuilder from '/js/PlantBuilder.js';
+import Observer from '/js/Observer.js';
 import { potMaterials, potColors, soilInformation, plantInformation, extrasInformation } from '/js/helpers/constants.js';
 
 let plant = null;
