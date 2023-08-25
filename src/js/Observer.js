@@ -3,15 +3,15 @@ export default class Observer {
 		this.subscribers = [];
 	}
 
-	Subscribe(observer) {
+	subscribe(observer) {
 		this.subscribers.push(observer);
 	}
 
-	Unsubscribe(observer) {
+	unsubscribe(observer) {
 		this.subscribers = this.subscribers.filter(o => o != observer);
 	}
 
-	Notify(payload) {
+	notify(payload) {
 		this.subscribers.forEach(o => o(payload));
 	}
 }
