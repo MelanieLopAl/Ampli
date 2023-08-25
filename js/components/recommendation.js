@@ -68,7 +68,7 @@ function showRecommendation (recommendation) {
   imagesContainer.appendChild(plantImage)
 
   const soilType = document.createElement('img')
-  soilType.src = `/assets/soil-${recommendation.plantName.toLowerCase()}.png`
+  soilType.src = `/assets/soil-${recommendation.soilType.toLowerCase()}.png`
   imagesContainer.appendChild(soilType)
 
   // Add pot image based on potMaterial
@@ -113,6 +113,24 @@ function showRecommendation (recommendation) {
     localStorage.setItem('customPotMaterial', recommendation.potMaterial)
     localStorage.setItem('customSoilType', recommendation.soilType)
     localStorage.setItem('customExtras', recommendation.extras.join(','))
+
+      // Guardar las URLs de las imágenes
+  localStorage.setItem('customPlantImage', plantImage.src);
+  localStorage.setItem('customSoilImage', soilType.src);
+  localStorage.setItem('customPotImage', potImage.src);
+
+   // Guardar las URLs de las imágenes de los extras
+   const customExtrasImages = [];
+   if (recommendation.extras.includes('pebbles')) {
+     customExtrasImages.push('/assets/pebbles.png');
+   }
+   if (recommendation.extras.includes('moss-pole')) {
+     customExtrasImages.push('/assets/moss-pole.png');
+   }
+   if (recommendation.extras.includes('mini-plants')) {
+     customExtrasImages.push('/assets/mini-plants.png');
+   }
+   localStorage.setItem('customExtrasImages', JSON.stringify(customExtrasImages));
 
     // Redireccionar a la página "customize.html"
     window.location.href = 'customize.html'

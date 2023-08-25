@@ -105,3 +105,9 @@ input[type="checkbox"] {
   width: 100%;
   height: 100%;
 }
+
+.imgCustom img{
+  margin-top: 5%;
+  position: absolute;
+  width: 25%;
+}
