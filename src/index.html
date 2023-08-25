@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Plant Recommender</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+  <h1>Let us find the perfect plant for you</h1>
+  <form id="plantForm">
+    <div class="question">
+      <label>Where will you place your plant?</label>
+      <div>
+        <input type="radio" name="placement" value="inside-indirect-light">Inside with some indirect light
+        <br>
+        <input type="radio" name="placement" value="inside-lot-indirect-light">Inside with a lot of indirect light
+        <br>
+        <input type="radio" name="placement" value="outside">Outside
+      </div>
+    </div>
+    <div class="question">
+      <label>Will it receive direct sunlight?</label>
+      <div>
+        <input type="radio" name="sunlight" value="yes">Yes
+        <br>
+        <input type="radio" name="sunlight" value="no">No
+      </div>
+    </div>
+    <div class="question">
+      <label>Do you have pets (cats or dogs)?</label>
+      <div>
+        <input type="radio" name="pets" value="yes">Yes
+        <br>
+        <input type="radio" name="pets" value="no">No
+      </div>
+    </div>
+    <div class="question">
+      <label>Do you tend to overwater or underwater?</label>
+      <div>
+        <input type="radio" name="watering" value="overwater">Overwater
+        <br>
+        <input type="radio" name="watering" value="underwater">Underwater
+        <br>
+        <input type="radio" name="watering" value="neither">Neither / I don’t know
+      </div>
+    </div>
+    <div class="question">
+      <label>How do you define your style?</label>
+      <div>
+        <input type="radio" name="style" value="minimalism">I like minimalism and material colors
+        <br>
+        <input type="radio" name="style" value="simple">I like some decoration and simple colors
+        <br>
+        <input type="radio" name="style" value="decorated">I like a lot of decoration and bright colors
+      </div>
+    </div>
+    <div class="question">
+      <label>Do you want to add any extra elements to your plant?</label>
+      <div>
+        <input type="checkbox" name="extras" value="moss-pole">Moss pole
+        <br>
+        <input type="checkbox" name="extras" value="pebbles">Pebbles
+        <br>
+        <input type="checkbox" name="extras" value="mini-plants">Smaller plants
+      </div>
+    </div>
+    <input type="submit" value="Get your plant!" id="submitButton">
+    <button type="button" id="clearButton">Clear</button>
+    <span id="customizeButtonContainer">
+      <button class="invisible" id="customizeButton">Customize</button>
+    </span>
+  </form>
+
+  <div id="recommendation"></div>
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
