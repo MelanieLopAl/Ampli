@@ -1,4 +1,4 @@
-import Plant from '/js/modules/Plant.js';
+import Plant from '/js/modules/plant.js';
 
 export default class PlantBuilder {
     constructor(plant, potMaterial, potDecoration, potColor, soil, extras) {
