@@ -8,3 +8,4 @@
 
 - Run `npm run lint` to see ESLint warnings.
 - Run `npm run lint-fix` to let ESLint to try to fix warning and error flags.
+- Run `npm run format`
